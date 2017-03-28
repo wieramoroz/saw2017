@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+	<title>
+		Compito 1 | Color Picker
+	</title>
+	<script type="text/javascript">
+		function cambiaColore() {
+			document.body.style.backgroundColor = document.getElementById("myBgColor").value;
+		}
+	</script>
+</head>
+<body>
+	<h2>
+		Cambia il colore dello sfondo
+	</h2>
+	<p>
+		<input type="color" id="myBgColor">
+		<button id="cambia" onClick="return cambiaColore()">
+			Cambia Colore dello Sfondo
+		</button>
+</body>
+</html>
