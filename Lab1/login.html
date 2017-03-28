@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+	<title>Lab1 | Login</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script type="text/javascript" src="functions.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="menu">
+			<div class="logo">
+				<a href="index.html">
+					<img class="imglogo" src="home2.png">
+				</a>
+			</div>
+			<p class="titolo">
+				Login
+			</p>
+			<div class="login">
+				<a class="link_menu" href="registrazione.html">Registrazione</a>
+			</div>			
+		</div>
+	<header>
+	<section>
+		<div class="page">
+			<div class="container">
+				<form name="form_login" onSubmit="return validate_log(this)" method="post">
+						<p class="from_log_name"> 
+							Username:
+							<input type="text" name="username">
+						</p>
+						<p class="from_log_password">
+							Password:
+							<input type="password" name="password">
+						</p>
+					<div class="button">
+						<button type="submit" name="from_log_invia" class="Button Button--default u-text-r-xs">
+							login
+						</button>
+					</div>
+				</form>
+
+
+
+			</div>
+		</div>
+	</section>
+</body>
+</html>

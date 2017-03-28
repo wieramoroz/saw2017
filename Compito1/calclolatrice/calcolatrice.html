@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<head>
+	<title>
+		Compito 1 | Calcolatrice
+	</title>
+	<script>
+	function calc(button) {
+		var op = button.getAttribute("id");
+		var num1 = parseFloat(document.getElementById("first").value);
+		console.info("num1=%s",num1);
+		if(num1 == "") {
+			alert("operatore 1 non valido");
+			return false;
+		}
+		var num2 = parseFloat(document.getElementById("second").value);
+		console.info("num2=%s",num2);
+		if(num2 == "") {
+			alert("operatore 2 non valido");
+			return false;
+		}
+		console.info("op=%s",op);
+		var result = 0;
+		if(op == '+')
+			 result = num1+num2+0;
+		else if( op == '-')
+			result =  num1-num2;
+		else if( op == '*')
+			result =  num1*num2;
+		else if(op == '/') {
+			if(num2 == 0) {
+				alert("num 2 non può essere 0");
+				return false;
+			}
+			result =  num1/num2;
+		}
+		console.info("result=%d",result);
+		document.getElementById("res").value = result;
+		return true;
+	}
+	</script>
+</head>
+<body>
+	<!--<form name="Calcolatrice">-->
+		<p>
+			<input id="first" type="text">
+			First Value
+		</p>
+		<p>
+			<input id="second" type="text">
+			Second Value
+		</p>
+		<p>
+			<button id="+" onClick="return calc(this)">+</button>
+			<button id="-" onClick="return calc(this)">-</button>
+			<button id="*" onClick="return calc(this)">*</button>
+			<button id="/" onClick="return calc(this)">/</button>
+		</p>
+	<!--</form>-->
+		<p>
+			<input id="res" type="text">
+			Result
+		</p>
+	
+</body>
+</html>

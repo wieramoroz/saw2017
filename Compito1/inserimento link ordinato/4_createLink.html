@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>DOM example</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+    <script>
+    function addLink() {
+      var textlink = window.prompt("Enter text link","");
+      if(textlink == "") {
+      	alert("Errore: il nome non può essere nullo!");
+      	return false;
+      }
+
+      var url = window.prompt("Enter URL","http://");
+      if(url ==""){
+      	alert("Errore: url non valido");
+      	return false;
+      }
+      var myli = document.createElement("li");
+      var mylink = document.createElement("a");
+      var mytxt = document.createTextNode(textlink);
+      var myul = document.getElementById("gallery");
+      var newTag= textlink.toUpperCase();
+
+      var lista_li = myul.getElementsByTagName("li");
+      console.info("creata lista e inizio ciclo");
+      console.info("n elementi=%d",lista_li.length);
+      for(var i=0; i < lista_li.length; i++) {
+      	console.info("i=%d", i);
+      	var a_temp = lista_li[i].getElementsByTagName("a");
+     	if(a_temp[0].getAttribute("tag") == newTag) { 
+     		alert("Errore: nome del link gia presente!");
+     		return false;
+     	}
+     	else if(a_temp[0].getAttribute("tag") > newTag)
+      	{
+      		myul.insertBefore(myli, lista_li[i]);
+      		myli.appendChild(mylink);
+      		mylink.appendChild(mytxt);
+     		mylink.setAttribute("tag",newTag);
+      		mylink.setAttribute("href",url);
+      		return true;
+      	}
+      }
+      console.info("fine cliclo");
+      myul.appendChild(myli);
+		myli.appendChild(mylink);
+		mylink.appendChild(mytxt);
+		mylink.setAttribute("tag",mytxt);
+		mylink.setAttribute("href",url);
+      return true;
+
+      /*myul.appendChild(myli);
+      myli.appendChild(mylink);
+      mylink.appendChild(mytxt);
+      mylink.setAttribute("href",url);*/
+     }
+    </script>
+ </head>
+
+<body>
+<h1>Add a new link to this list</h1>
+<ul id="gallery">
+<li ><a tag="BOY" href="images/boy.png">Boy</a></li>
+<li ><a tag="DEFAULT" href="images/default.png">Default</a></li>
+<li ><a tag="MAR" href="images/man.png">Man</a></li>
+<li ><a tag="WOMAN" href="images/woman.png">Woman</a></li>
+</ul>
+
+<input type="button" value="Add link" onClick="addLink();">
+</body>
+</html>
