@@ -4,11 +4,7 @@ body {
 	font-size: 12;*/
 }
 
-p {
-	color: #51466B;
-	/*font-family: 'Work Sans', sans-serif;*/
-	font-size: 2em;
-}
+
 .menu {
 	background-color: #CBB0EA;
 	/*padding-right: 10px;
@@ -155,26 +151,32 @@ p {
 	font-weight: bold;
 }
 
-.form_reg_name {
+.form_error {
+	font-family: "sans-serif";
+	color: #FF0066;
+	font-size: 12px;
+	width: 30em;
+}
+
+.form_align {
+	position: relative;
+	border-left: 30%;
 	width: 80%;
-	border: 2px solid;
-	text-align: center;	
+	align-items: left;
 }
 
-.form_reg_mail {
+.form_item {
 	border: 2px solid;
-	text-align: center;	
+	width: 30em;
+	text-align: left;
 }
 
-.form_reg_password {
-	border: 2px solid;
-	text-align: center;	
+.form_text {
+	color: #51466B;
+	font-family: 'Montez', cursive;
+	font-size: 2em;
 }
 
-.form_reg_invia {
-	border: 2px solid;
-	text-align: center;	
-}
 
 
 
