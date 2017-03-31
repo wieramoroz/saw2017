@@ -4,7 +4,7 @@ function validate_reg(form) {
 	var error = false;
 	document.getElementById("user_err").innerText="";
 	document.getElementById("mail_err").innerText="";
-	document.getElementById("pass_err").innerText=""
+	document.getElementById("pass_err").innerText="";
 
     if (form.username.value == "" || /[^a-zA-z]/.test(form.username.value)) {
     	error= true;
@@ -22,20 +22,19 @@ function validate_reg(form) {
 }
 
 function validate_log(form) {
-	var reason = "";
+	var error = false;
+	document.getElementById("user_err").innerText="";
+	document.getElementById("pass_err").innerText="";
 
-    if (form.username.value == "" || /[^a-zA-z]/.test(form.username.value))
-        reason += "Errore: il nome deve contenere solo le lettere\n";
-    if (form.password.value == "" || /[^0-9]/.test(form.password.value))
-        reason += "Errore: la password deve contenere solo i numeri\n";
-    
-
-    if (reason == "")
-        return true;  
-    else {
-        alert(reason);  
-        return false;
+    if (form.username.value == "" || /[^a-zA-z]/.test(form.username.value)) {
+    	error= true;
+        document.getElementById("user_err").innerText="Deve contenere solo lettere";
     }
+    if (form.password.value == "" || /[^0-9]/.test(form.password.value)) {
+    	error = true;
+        document.getElementById("pass_err").innerText = "Deve contenere solo numeri";
+    }
+    return !error;
 }
 
 /*

@@ -21,28 +21,42 @@
 				<a class="link_menu" href="registrazione.html">Registrazione</a>
 			</div>			
 		</div>
-	<header>
+	</header>
 	<section>
 		<div class="page">
 			<div class="container">
 				<form name="form_login" onSubmit="return validate_log(this)" method="post">
-						<p class="from_log_name"> 
-							Username:
-							<input type="text" name="username">
-						</p>
-						<p class="from_log_password">
-							Password:
-							<input type="password" name="password">
-						</p>
-					<div class="button">
-						<button type="submit" name="from_log_invia" class="Button Button--default u-text-r-xs">
-							login
-						</button>
+					<div class="tabella">
+						<div class="riga">
+							<span class="colonna form_text"> 
+								Username:
+							</span>
+							<span class="colonna">
+								<input type="text" name="username">
+							</span>
+							<span class="colonna">
+								<label id="user_err" class="form_error">
+								</label>
+							</span>
+						</div>
+						<div class="riga">
+							<span class="colonna form_text">
+								Password:
+							</span>
+							<span class="colonna">
+								<input type="password" name="password">
+							</span>
+							<span class="colonna">
+								<label id="pass_err" class="form_error"></label>
+							</span>
+						</div>
+						<div class="form_button">
+							<button type="submit" name="from_log_invia">
+								login
+							</button>
+						</div>
 					</div>
 				</form>
-
-
-
 			</div>
 		</div>
 	</section>

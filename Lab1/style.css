@@ -130,7 +130,7 @@ body {
 	background: #D9CBEF;
 	width: 80%;
 	height: auto;
-	margin-top: 10%;
+	margin-top: 8%;
 	margin-right: 10%;
 	margin-left: 10%;
 	border: solid 3px #695787;
@@ -146,8 +146,9 @@ body {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	height: auto;
-	font-family: 'Montez', cursive;
-	font-weight: bold;
+	padding-left: 5%;
+	/*font-family: 'Montez', cursive;
+	font-weight: bold;*/
 }
 
 .form_error {
@@ -172,6 +173,7 @@ body {
 	color: #51466B;
 	font-family: 'Montez', cursive;
 	font-size: 2em;
+	font-weight: bold;
 }
 
 .form_mail {
